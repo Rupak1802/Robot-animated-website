@@ -1,0 +1,359 @@
+════════════════════════════════════════════════════════════════
+  WEBSITE ANALYSIS — 1X TECHNOLOGIES / NEO HOME ROBOT
+  Source: https://www.1x.tech/neo
+  Analyzed: May 2026
+════════════════════════════════════════════════════════════════
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ BRAND NAME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Company:  1X Technologies (stylized as "1X")
+Product:  NEO
+Full product name: NEO Home Robot
+
+1X is the parent company — an AI and robotics company
+based in Palo Alto, California. NEO is their flagship
+consumer-facing product.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ TAGLINE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Primary tagline (meta description & hero):
+  "Transform your Home."
+
+Supporting tagline (page headline):
+  "NEO takes care of tasks around the house so you can
+   focus on what matters to you."
+
+Company mission statement (About page):
+  "Building a world where we do more of what we love,
+   while our humanoid companions handle the rest."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ ONE-LINER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+"NEO is a friendly home robot that automates your
+ household chores so you can reclaim your time."
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ BRAND VOICE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Tone:       Warm, calm, optimistic, quietly confident
+Register:   Simple and human — avoids heavy tech jargon
+Personality: Friendly companion brand, not cold tech brand
+Approach:   Aspirational ("focus on what matters to you")
+            + grounded ("quieter than a modern refrigerator")
+
+Key copy characteristics:
+  • Short, punchy section headers (e.g. "Soft and Safe",
+    "Laugh and Learn", "Grows With You")
+  • Uses second person ("your NEO", "you can")
+  • Humanises the robot ("NEO learns", "NEO plugs itself in")
+  • Celebrates simplicity over specs (specs are present
+    but secondary to lifestyle language)
+  • Positive framing around safety and trust at every turn
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ COLORS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Background (meta theme-color): #f7f7f7  — near-white warm grey
+Primary text:                  Near-black (dark charcoal)
+Accent / CTA buttons:          Black (#000000) with white text
+Secondary background panels:   White / off-white
+Imagery palette:               Warm neutrals, soft beige,
+                               natural greens (lifestyle shots)
+                               and crisp whites (product shots)
+
+Overall palette: Minimal monochrome with warm grey base.
+No bright brand colors — the robot itself (cream/beige knit
+suit) serves as the visual color identity anchor.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ NAVIGATION MENU
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Top-level nav bar (left-anchored logo + right links):
+
+  Logo: 1X (SVG mark, links to homepage)
+
+  Primary links:
+    1. Neo          → /neo
+    2. AI           → /ai
+    3. Factory      → /manufacturing
+    4. Stories      → /discover
+    5. Careers      → /careers
+    6. About        → /about
+
+No hamburger/mobile menu is described — nav appears
+as a flat horizontal strip across the top.
+
+On-page anchor tabs (NEO product page sub-nav):
+    • Utility
+    • Design
+    • Companion
+    • Intelligence
+
+Sticky CTA inside page:
+    • FAQ  (anchor)
+    • Product  (anchor)
+    • Order  → /order  (button)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ HERO SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Visual:   Full-bleed portrait-orientation image of NEO
+          standing — tall, slender humanoid robot in a
+          soft cream/off-white knit suit.
+          (1069 × 2293 px webp)
+
+Headline: NEO
+Subhead:  Home Robot
+
+CTA:      [ Order Now ]  →  /order
+Sub-CTA:  "$200 Deposit" (displayed beneath button —
+           communicates low-barrier commitment)
+
+Style:    Minimal. Large white space around the robot
+          image. Typography is clean, large, centered.
+          Hero reads almost like an Apple product page.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ SHADER / BACKGROUND
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+No canvas shaders or WebGL backgrounds detected.
+The site uses:
+  • Static flat color backgrounds (#f7f7f7 / white)
+  • Full-bleed video thumbnails (via Mux CDN) that
+    auto-play inline as scroll-triggered video sections
+  • High-res photography (via Sanity CDN) as section
+    backgrounds
+  • No gradient overlays, particle effects, or 3D shaders
+
+The "depth" effect is achieved through typography
+layered over video/imagery, not GPU shaders.
+
+Animated text element observed:
+  Scrolling/typing animation on chore tasks — letters
+  appear one-by-one spelling out task names like:
+  "Walk to Person", "Put Away Dishes", "Clean Bathroom"
+  This is a CSS/JS character-reveal animation.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ SCROLL AREAS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+The page is structured as a long vertical scroll with
+distinct content zones, separated by full-bleed video
+or image breaks:
+
+  1. HERO               — Robot portrait + Order CTA
+  2. INTRO BAND         — "Transform Your Home" + keynote video
+                          Three icon+label feature pills:
+                          Helping Hand / Reclaim Time / Helpful Intelligence
+  3. UTILITY SCROLL     — Autonomous chore video (Mux player)
+                          with animated letter-by-letter task overlays.
+                          6 video clips showing different chores.
+  4. EXPERT MODE BAND   — "Expert Mode" explainer section
+  5. DESIGN SECTION     — "Soft and Safe" video + 4 feature pills
+                          + photo grid (6 images: leaves, tendons,
+                          flowers, cozy, knit suit, soft body)
+  6. COMPANION SECTION  — "Laugh and Learn" video + 3 feature pills
+  7. INTELLIGENCE BAND  — "Grows With You" video
+  8. PRODUCT SPECS      — Full tabbed spec sheet
+                          (Utility / Design / AI / Hardware tabs)
+  9. FAQ ACCORDION      — 19 collapsible Q&A items
+ 10. ORDER CTA          — "NEO Home Robot" repeat + Order button
+ 11. FOOTER
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ FEATURES SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Features are grouped into four named pillars:
+
+── UTILITY ─────────────────────────────
+Section headline: "Automate Your Chores"
+Copy: "Give your NEO a list of chores, schedule a time
+       you want them done and come back to a cleaner
+       home everyday."
+
+Demonstrated tasks (via video clips):
+  Walk to Person / Put Away Dishes / Clean Bathroom
+  (plus additional unspecified chore clips)
+
+Feature highlights:
+  • Autonomy — "Get the door"
+    Uses Redwood AI (1X's Generalist AI model) for
+    learning and repeating tasks. Arrives with basic
+    autonomy and grows over time.
+  • Scheduled Expert Mode — "Laundry"
+    For complex unknown tasks, a 1X Expert remotely
+    supervises NEO to teach it new abilities.
+  • Voice Interface — Speak naturally to access all
+    features without using any device.
+  • Mobile App — Manage chore schedule, communicate
+    remotely, monitor NEO.
+  • Self-Charge — NEO manages its own battery;
+    plugs itself in when needed.
+  • Remote Control — Pilot NEO from anywhere via
+    Mobile App or VR device.
+  • Emotive Ear Rings — Communicate NEO's state and
+    status (battery, attention, etc.)
+  • Boom Box — Use NEO as a mobile Bluetooth speaker.
+
+── DESIGN ───────────────────────────────
+Section headline: "Soft and Safe"
+Copy: "NEO is designed for gentle and safe interactions,
+       making it perfect for people and the home."
+
+Feature highlights:
+  • Light — Fewer components, lightweight build.
+  • Quiet — Operates quieter than a modern refrigerator
+             (22 dB audible noise).
+  • Soft — Deformable 3D lattice wraps internal
+            components for cushioning.
+  • Gentle — Tendon-driven actuators create safe movements.
+  • Soft Body — All hardware wrapped in custom 3D lattice
+                polymer for safety.
+  • Safe Movements — 1X Tendon Drive actuation: precise,
+                     low-energy movements.
+  • Pinch Proof — Joints covered; surface entirely pinch-proof.
+  • Body Language — Understands and responds to human
+                    gestures and expressions.
+  • Comfortable to be Around — Designed to complement
+                               your living space.
+  • Machine Washable — Soft suit and shoes made from
+                       machine-washable nylon.
+
+── COMPANION ────────────────────────────
+Section headline: "Laugh and Learn"
+Copy: "Ask NEO questions and get instant access to
+       knowledge, personalized intelligence, or even a joke."
+
+Feature highlights:
+  • Smart — Ask anything (history, recipes, advice) and
+             get real-time answers.
+  • Contextual Help — Pairs visual/spatial awareness
+                      with memory to personalize interactions.
+  • Fun — Shares jokes, stories, and games for lively,
+           natural conversations.
+
+── INTELLIGENCE ─────────────────────────
+Section headline: "Grows With You"
+Copy: "NEO is built for full autonomy. Early Access offers
+       foundational autonomy, and with continued use, NEO
+       learns and unlocks new capabilities."
+
+AI feature highlights:
+  • Redwood AI — 1X's proprietary vision language model
+                 for learning and performing chores.
+  • Built-in LLM — Understands, reasons, and converses.
+  • Audio Intelligence — Interprets audio cues and
+                         conversational context.
+  • Memory — Retains information to personalize experience.
+  • Visual Intelligence — Uses visual input to enhance
+                          conversations.
+  • Fully Mobile — AI-driven navigation to wherever needed.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ PRICING SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+No full pricing page exists — pricing info is surfaced
+inline on the NEO product page:
+
+  Entry CTA:     $200 Deposit to reserve/order
+  Model:         Early Access (pre-order / waitlist model)
+  Subscription:  Referenced in FAQ ("will I need an
+                 additional subscription?") — details not
+                 publicly displayed on page.
+
+Box Contents (what ships with NEO):
+  • NEO robot
+  • Charger
+  • Lint Roller
+  • Case
+
+Hardware specs that contextualize the price tier:
+  Height: 5'6"  |  Weight: 66 lbs  |  Lift: 154 lbs
+  Carry: 55 lbs  |  Arm Payload: 18 lbs
+  Battery: 842 Wh / 4h runtime / 6 min quick charge
+  Chipset: 1X NEO Cortex (Nvidia Jetson Thor)
+  AI Compute: Up to 2070 FP4 TFLOPS
+  Cameras: Dual 8.85MP 90Hz Stereo Fisheye
+  Comms: WiFi, Bluetooth, 5G
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ CALL TO ACTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Primary CTA (appears twice — top hero + bottom repeat):
+  Button text:  "Order Now"
+  Link:         https://www.1x.tech/order
+  Qualifier:    "$200 Deposit" (displayed under button)
+
+Secondary CTA (About page):
+  "Join waitlist" — email opt-in
+  Sub-text: "Opt in to receive updates. Unsubscribe anytime."
+
+Inline media CTAs:
+  "Watch Keynote" → https://youtu.be/LTYMWadOW7c
+  "Watch Design"  → https://youtu.be/mveqrNJj8ME
+
+Sub-nav sticky CTA:
+  "Order" button persists in the sub-navigation bar
+  as the user scrolls through the product page.
+
+Tone of CTA: Low-pressure. The $200 deposit framing
+reduces commitment anxiety. No countdown timers or
+scarcity language used.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ FOOTER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Logo:      1X SVG mark (links to homepage)
+Copyright: "1X © 2026"
+
+Product / Company Links:
+  NEO          → /neo
+  Careers      → /careers
+  AI           → /ai
+  Factory      → /manufacturing
+  About        → /about
+  Stories      → /discover
+  Robot Fleet  → /robot-fleet
+  Logs         → /logs
+
+Social Media:
+  LinkedIn  → linkedin.com/company/1x-technologies
+  YouTube   → youtube.com/@1X-tech
+  Instagram → instagram.com/1x.technologies/
+  TikTok    → tiktok.com/@1x.tech
+  X (Twitter) → x.com/1x_tech
+
+Legal / Utility:
+  Terms of Use       → /terms-and-conditions
+  Privacy & Cookies  → /privacy-policy
+  Press              → /press
+  Support            → /support
+
+Additional:
+  Get Updates        → /get-updates
+  Investor Relations → /investor-relations
+
+Style: Minimal single-row footer, dark text on
+       light background. No newsletter embed in
+       footer (newsletter opt-in is on About page).
+
+
+════════════════════════════════════════════════════════════════
+  END OF ANALYSIS
+════════════════════════════════════════════════════════════════

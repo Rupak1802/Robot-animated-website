@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #111111;
+  --color-primary-foreground: #ffffff;
+  --color-accent: #aa3bff;
+  --color-muted: #71717a;
+  --color-muted-foreground: #a1a1aa;
+
+  --animate-spotlight: spotlight 0.5s ease 0.5s 1 forwards;
+  --animate-orbit-pulse: orbit-pulse 3s ease-in-out infinite;
+}
+
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+@keyframes orbit-pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(1.08);
+    opacity: 0.8;
+  }
+}
+
+/* Base style resets and customizations */
+:root {
+  font-family: 'Beriko', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #f7f7f7;
+  color: #111111;
+  scroll-behavior: smooth;
+  color-scheme: light dark;
+}
+
+html.dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* WebGL canvas overlay styles */
+canvas {
+  user-select: none;
+}
