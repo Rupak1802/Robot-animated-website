@@ -11,9 +11,6 @@ import {
   Moon,
   BookOpen,
   HelpCircle,
-  Linkedin,
-  Youtube,
-  Instagram,
   LifeBuoy,
   ChevronDown
 } from "lucide-react";
@@ -67,6 +64,7 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [activeTab, setActiveTab] = useState("utility");
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
+  const [performanceMode, setPerformanceMode] = useState(false);
 
   // Toggle body class for dark mode
   useEffect(() => {
@@ -76,6 +74,17 @@ export default function App() {
       document.documentElement.classList.remove("dark");
     }
   }, [darkMode]);
+
+  useEffect(() => {
+    const isReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    const connection = (navigator as any).connection;
+    const saveData = connection?.saveData;
+    const effectiveType = connection?.effectiveType;
+    const lowMemory = (navigator as any).deviceMemory <= 4;
+    const slowConnection = typeof effectiveType === "string" && /(2g|3g)/i.test(effectiveType);
+
+    setPerformanceMode(Boolean(isReducedMotion || saveData || lowMemory || slowConnection));
+  }, []);
 
   // Floating menu options
   const floatingMenuOptions = [
@@ -284,7 +293,9 @@ export default function App() {
       {/* 2. Hero Section */}
       <section id="neo" className="relative min-h-[calc(100vh-64px)] w-full flex items-center justify-center py-12 px-6 overflow-hidden bg-black">
         {/* Background Spotlight */}
-        <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill={darkMode ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.03)"} />
+        {!performanceMode && (
+          <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill={darkMode ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.03)"} />
+        )}
 
         <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center z-10">
           {/* Left Hero Content */}
@@ -323,12 +334,20 @@ export default function App() {
           </div>
 
           {/* Right Hero Spline / 3D Content */}
-          <div className="lg:col-span-6 h-[500px] lg:h-[700px] w-full relative rounded-3xl overflow-hidden bg-zinc-150/40 dark:bg-zinc-950/40flex items-center justify-center shadow-inner">
-            {/* Spline Canvas component loaded lazily */}
-            <SplineScene
-              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-              className="w-full h-full object-cover"
-            />
+          <div className="lg:col-span-6 h-[500px] lg:h-[700px] w-full relative rounded-3xl overflow-hidden bg-zinc-150/40 dark:bg-zinc-950/40 flex items-center justify-center shadow-inner">
+            {performanceMode ? (
+              <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-zinc-950 to-black text-white px-8 text-center">
+                <div>
+                  <p className="text-xl font-semibold">Performance mode enabled</p>
+                  <p className="mt-2 text-sm text-zinc-300">3D scene disabled to keep the page fast and responsive.</p>
+                </div>
+              </div>
+            ) : (
+              <SplineScene
+                scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+                className="w-full h-full object-cover"
+              />
+            )}
           </div>
         </div>
 
@@ -358,7 +377,7 @@ export default function App() {
 
       {/* 3. WebGL Intro Band */}
       <section className="relative w-full h-[500px] flex items-center justify-center px-6 overflow-hidden bg-black text-white">
-        <WebGLShader />
+        <WebGLShader disabled={performanceMode} />
         <div className="relative max-w-3xl mx-auto text-center z-10 px-4">
           <div className="inline-flex items-center justify-center gap-1.5 mb-6 text-emerald-400">
             <span className="relative flex h-2 w-2 items-center justify-center">
@@ -541,7 +560,7 @@ export default function App() {
           title="Reserve Your NEO"
           subtitle="Pre-order today and join our waitlist pipeline. Standard deposits are fully refundable."
           plans={pricingPlans}
-          showAnimatedBackground={true}
+          showAnimatedBackground={!performanceMode}
         />
       </section>
 

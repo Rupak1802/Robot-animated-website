@@ -7,7 +7,7 @@
   --color-muted: #71717a;
   --color-muted-foreground: #a1a1aa;
 
-  --animate-spotlight: spotlight 0.5s ease 0.5s 1 forwards;
+  --animate-spotlight: spotlight 0s ease 0s 1 forwards;
   --animate-orbit-pulse: orbit-pulse 3s ease-in-out infinite;
 }
 
@@ -19,7 +19,7 @@
 
   100% {
     opacity: 1;
-    transform: translate(-50%, -40%) scale(1);
+    transform: translate(-50%, -40%) scale(0.5);
   }
 }
 

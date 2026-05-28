@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 import * as THREE from "three"
 
-export function WebGLShader() {
+export function WebGLShader({ disabled = false }: { disabled?: boolean }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const sceneRef = useRef<{
     scene: THREE.Scene | null
@@ -22,7 +22,7 @@ export function WebGLShader() {
   })
 
   useEffect(() => {
-    if (!canvasRef.current) return
+    if (disabled || !canvasRef.current) return
 
     const canvas = canvasRef.current
     const { current: refs } = sceneRef
@@ -61,14 +61,18 @@ export function WebGLShader() {
 
     const initScene = () => {
       refs.scene = new THREE.Scene()
-      refs.renderer = new THREE.WebGLRenderer({ canvas })
-      refs.renderer.setPixelRatio(window.devicePixelRatio)
+      refs.renderer = new THREE.WebGLRenderer({ canvas, antialias: false })
+      refs.renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5))
       refs.renderer.setClearColor(new THREE.Color(0x000000))
 
       refs.camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, -1)
 
+      const rect = canvas.getBoundingClientRect()
+      const width = Math.max(1, Math.floor(rect.width))
+      const height = Math.max(1, Math.floor(rect.height))
+
       refs.uniforms = {
-        resolution: { value: [window.innerWidth, window.innerHeight] },
+        resolution: { value: [width, height] },
         time: { value: 0.0 },
         xScale: { value: 1.0 },
         yScale: { value: 0.5 },
@@ -102,17 +106,20 @@ export function WebGLShader() {
     }
 
     const animate = () => {
-      if (refs.uniforms) refs.uniforms.time.value += 0.01
-      if (refs.renderer && refs.scene && refs.camera) {
-        refs.renderer.render(refs.scene, refs.camera)
+      if (!document.hidden) {
+        if (refs.uniforms) refs.uniforms.time.value += 0.01
+        if (refs.renderer && refs.scene && refs.camera) {
+          refs.renderer.render(refs.scene, refs.camera)
+        }
       }
       refs.animationId = requestAnimationFrame(animate)
     }
 
     const handleResize = () => {
-      if (!refs.renderer || !refs.uniforms) return
-      const width = window.innerWidth
-      const height = window.innerHeight
+      if (!refs.renderer || !refs.uniforms || !canvasRef.current) return
+      const rect = canvasRef.current.getBoundingClientRect()
+      const width = Math.max(1, Math.floor(rect.width))
+      const height = Math.max(1, Math.floor(rect.height))
       refs.renderer.setSize(width, height, false)
       refs.uniforms.resolution.value = [width, height]
     }
@@ -133,7 +140,13 @@ export function WebGLShader() {
       }
       refs.renderer?.dispose()
     }
-  }, [])
+  }, [disabled])
+
+  if (disabled) {
+    return (
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-black to-zinc-950" />
+    )
+  }
 
   return (
     <canvas

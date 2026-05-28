@@ -122,15 +122,19 @@ const ShaderCanvas = () => {
 
     let animationFrameId: number;
     const render = (time: number) => {
-      gl.uniform1f(iTimeLoc, time * 0.001);
-      gl.uniform2f(iResLoc, canvas.width, canvas.height);
-      gl.drawArrays(gl.TRIANGLES, 0, 6);
+      if (!document.hidden) {
+        gl.uniform1f(iTimeLoc, time * 0.001);
+        gl.uniform2f(iResLoc, canvas.width, canvas.height);
+        gl.drawArrays(gl.TRIANGLES, 0, 6);
+      }
       animationFrameId = requestAnimationFrame(render);
     };
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+      const rect = canvas.getBoundingClientRect();
+      const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
+      canvas.width = Math.max(1, Math.floor(rect.width * ratio));
+      canvas.height = Math.max(1, Math.floor(rect.height * ratio));
+      gl.viewport(0, 0, canvas.width, canvas.height);
     };
     handleResize();
     window.addEventListener('resize', handleResize);
